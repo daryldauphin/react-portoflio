@@ -120,11 +120,11 @@ function App() {
 							<div class="inner">
 								<p>Web Developer</p>
 								<p>React.JS</p>
-                                <p>Material UI</p>
+                <p>Material UI</p>
 								<p>WordPress</p>
 								<p>BootStrap 4</p>
-                                <p>Adobe CC</p>
-                                <p>SEO</p>
+                <p>Adobe CC</p>
+                <p>SEO</p>
 								<p>Git</p>
 
 							</div>
