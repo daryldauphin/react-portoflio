@@ -37,13 +37,18 @@ body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 100% !important;
+  width: 100% !important;
+  
+    
 }
 #textSlider div {
 	color: #FFF;
 	font-family: 'Lato', sans-serif;
-	text-transform: uppercase;
+  text-transform: uppercase;
+  
 }
+
+
 
 .iamCol {
     text-align: right;
@@ -116,6 +121,60 @@ body {
 	#textSlider.row { margin-right: 0px !important; margin-left: 0px !important; }
 	.iamCol { text-align: right; font-size:30pt; }
 	.slideCol { font-size: 55pt; text-align: left; }
+}
+
+#textSlider {
+  animation: fadeIn ease 5s;
+  -webkit-animation: fadeIn ease 5s;
+  -moz-animation: fadeIn ease 5s;
+  -o-animation: fadeIn ease 5s;
+  -ms-animation: fadeIn ease 5s;
+}
+
+
+@keyframes fadeIn{
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
 }
 
 #stars {
