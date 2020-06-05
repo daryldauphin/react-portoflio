@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
+import { gsap } from 'gsap/all';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -14,6 +15,17 @@ import { withStyles } from '@material-ui/core/styles';
 import './style.css';
 import logo from './imgs/logo.png';
 import { shadows } from '@material-ui/system';
+import './contact.css';
+import { TweenLite, Linear } from "gsap";
+import { TimelineMax, CSSPlugin, ScrollToPlugin, Draggable } from "gsap/all"; 
+import { TweenMax, TimelineLite, Power2, Elastic } from "gsap";
+import Modal from '@material-ui/core/Modal';
+import Backdrop from '@material-ui/core/Backdrop';
+import Fade from '@material-ui/core/Fade';
+import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
+import ThreeDRotation from '@material-ui/icons/ThreeDRotation';
+import PhoneInTalkIcon from '@material-ui/icons/PhoneInTalk';
+
 
 
 const StyledBadge = withStyles((theme) => ({
@@ -54,12 +66,32 @@ const StyledBadge = withStyles((theme) => ({
   }))(Avatar);
 
 const useStyles = makeStyles((theme) => ({
+  modal: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  paper: {
+    backgroundColor: theme.palette.background.paper,
+    border: '1px solid #000',
+    boxShadow: theme.shadows[5],
+    borderRadius: '5px',
+    padding: theme.spacing(2, 4, 3),
+  },
     root: {
         flexGrow: 1,
     },
     button: {
-fontSize:'1.5rem'
+fontSize:'1.5rem',
+marginRight: '3.0rem',
     },
+    buttonContact: {
+      width: '16rem',
+      textDecoration: 'none',
+      color: 'white',
+      
+      fontSize: '18px'
+          },
     menuButton: {
         marginRight: theme.spacing(2),
     },
@@ -73,11 +105,23 @@ fontSize:'1.5rem'
     }
 }));
 
+
+
 function App() {
+  const [currentFrame, setCurrentFrame] = useState(0)
 
     const classes = useStyles();
-
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => {
+      setOpen(true);
+    };
+  
+    const handleClose = () => {
+      setOpen(false);
+    };
+    
   return (
+    
       <div>
 
 <div id="myPageContent" class="container-fluid">
@@ -102,7 +146,72 @@ function App() {
     
     </div>
      </Typography>
-    <Button className={classes.button} color="inherit">Contact</Button>
+     
+     <Button id="contact" onClick={handleOpen} className={classes.button} color="inherit">Contact</Button>
+
+     <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        className={classes.modal}
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={open}>
+          <div className={classes.paper}>
+            <h2 id="transition-modal-title">Contact Me.</h2>
+
+
+
+            {currentFrame === 0 && 
+      <main>
+        <form>
+  
+<Button onClick={() => setCurrentFrame(currentFrame + 1)} className={classes.buttonContact} variant="contained" color="secondary">
+Phone   <PhoneInTalkIcon/>
+
+      </Button>
+               
+        </form>
+      </main>
+    }
+    {currentFrame === 1 && 
+
+
+        <main>
+        
+ 
+        <Button className={classes.buttonContact} variant="contained" color="secondary">
+<a href="tel:1-562-867-5309">1-562-867-5309</a>
+      </Button>
+               
+        </main>
+
+
+    }
+   
+
+
+
+
+
+
+     
+<button class="btn blue">Send Message
+  <i class="fa fa-rss fa-fw"></i>
+</button>
+            <p id="transition-modal-description"> Email: Social icons.</p>
+          </div>
+        </Fade>
+      </Modal>
+
+
+
+
   </Toolbar>
 </AppBar>
 	
@@ -140,14 +249,37 @@ function App() {
 </section>
 </div>
 
+<div class="BIO">
+  BIO
+  shadowsfsdf
+  s
+  dfs
+  dfs
+  d
+  d
+  describedbyd
+  d
+  describedbyd
+  d
+  d
+  d
+  d
+  describedbyd
+  d
+  describedbyd
+  d
+  describedbyd
+  d
 
+</div>
+      
+    
 
 
 
 </div>
 
-      
-    
+
   );
 }
 

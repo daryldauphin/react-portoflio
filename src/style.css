@@ -2,7 +2,23 @@ body {
     background-color: azure;
 }
 
+#myPageContent, section { 
+  height:100vh !important; 
+  width:100% !important;
+  overflow: hidden;
 
+}
+
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+
+}
 
 @import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,900);
@@ -24,10 +40,6 @@ body {
 .container-fluid {
     padding-right: 0px !important;
     padding-left: 0px !important;
-}
-#myPageContent, section { 
-	height:100vh !important; 
-	width:100% !important;
 }
 
 
@@ -236,4 +248,7 @@ body {
     }
   }
   
-      
+      .BIO {
+        background-color: white;
+      }
+
