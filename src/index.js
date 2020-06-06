@@ -25,7 +25,7 @@ import Fade from '@material-ui/core/Fade';
 import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
 import ThreeDRotation from '@material-ui/icons/ThreeDRotation';
 import PhoneInTalkIcon from '@material-ui/icons/PhoneInTalk';
-
+import {animateIn, animateOut} from './gsap'
 
 
 const StyledBadge = withStyles((theme) => ({
@@ -146,7 +146,22 @@ function App() {
     
     </div>
      </Typography>
-     
+     <nav id="navigation">
+	<ul>
+		<li>
+			<a href="#">Menu link</a>
+		</li>
+		<li>
+			<a href="#">And another</a>
+		</li>
+		<li>
+			<a href="#">One more</a>
+		</li>
+		<li>
+			<a href="#">Ok last one</a>
+		</li>
+	</ul>
+</nav>
      <Button id="contact" onClick={handleOpen} className={classes.button} color="inherit">Contact</Button>
 
      <Modal
