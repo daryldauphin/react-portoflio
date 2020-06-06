@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import { gsap } from 'gsap/all';
 import { makeStyles } from '@material-ui/core/styles';
@@ -18,7 +18,7 @@ import { shadows } from '@material-ui/system';
 import './contact.css';
 import { TweenLite, Linear } from "gsap";
 import { TimelineMax, CSSPlugin, ScrollToPlugin, Draggable } from "gsap/all"; 
-import { TweenMax, TimelineLite, Power2, Elastic } from "gsap";
+import { TweenMax, TimelineLite, Power3, Elastic } from "gsap";
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
@@ -119,6 +119,64 @@ function App() {
     const handleClose = () => {
       setOpen(false);
     };
+
+
+
+    let nav = useRef(null)
+
+    useEffect(() => {
+    
+    let nav = document.getElementById("navigation");
+    nav.addEventListener("click", animateIn);
+    
+    
+    }, [])
+    
+    
+    
+    function animateIn(e) {
+        e.stopPropagation();
+        gsap.to(nav, { // no Max/Lite
+          duration: 1.3, // duration in vars parameter
+          width: 300, // no need for "" around numerical values unless you need to add units
+          height: 300,
+          borderTopLeftRadius: "30% 29%",
+          borderTopRightRadius: "70% 26%",
+          borderBottomRightRadius: "29% 74%",
+          borderBottomLeftRadius: "71%",
+          ease: "elastic" // use the condensed form for strings
+        });
+      
+        gsap.to(nav, {
+          duration: 0.4,
+          opacity: 1,
+          ease: "none"
+        }).delay(0.45);
+      }
+    
+    function animateOut() {
+        gsap.to(nav, {
+            duration: 0.5, 
+        width: 30,
+        height: 30,
+        borderTopLeftRadius: "10%",
+        borderTopRightRadius: "10%",
+        borderBottomRightRadius: "10%",
+        borderBottomLeftRadius: "10%",
+        ease: "Power2"
+      });
+    
+      gsap.to(nav, {
+            duration: 0.2, 
+        opacity: 0,
+        ease: "Linear"
+      });
+    }
+    
+    window.addEventListener("click", function() {
+      //Hide the menus if visible
+      animateOut();
+    });
     
   return (
     
@@ -146,7 +204,8 @@ function App() {
     
     </div>
      </Typography>
-     <nav id="navigation">
+    
+  <nav rel={el => {nav = el}} id="navigation">
 	<ul>
 		<li>
 			<a href="#">Menu link</a>
@@ -162,6 +221,7 @@ function App() {
 		</li>
 	</ul>
 </nav>
+
      <Button id="contact" onClick={handleOpen} className={classes.button} color="inherit">Contact</Button>
 
      <Modal
