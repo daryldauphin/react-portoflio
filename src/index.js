@@ -26,6 +26,21 @@ import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
 import ThreeDRotation from '@material-ui/icons/ThreeDRotation';
 import PhoneInTalkIcon from '@material-ui/icons/PhoneInTalk';
 import {animateIn, animateOut} from './gsap'
+import TextField from '@material-ui/core/TextField';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import Snackbar from '@material-ui/core/Snackbar';
+import Slide from '@material-ui/core/Slide';
+
+
+
+function TransitionUp(props) {
+  return <Slide {...props} direction="up" />;
+}
+
+
+
+
 
 
 const StyledBadge = withStyles((theme) => ({
@@ -59,9 +74,15 @@ const StyledBadge = withStyles((theme) => ({
   
   const SmallAvatar = withStyles((theme) => ({
     root: {
+      
       width: 22,
       height: 22,
       border: `2px solid ${theme.palette.background.paper}`,
+      width: '100%',
+    '& > * + *': {
+      marginTop: theme.spacing(2),
+    },
+      
     },
   }))(Avatar);
 
@@ -79,7 +100,13 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2, 4, 3),
   },
     root: {
+      
         flexGrow: 1,
+        '& .MuiTextField-root': {
+          margin: theme.spacing(1),
+          width: '25ch',
+        },
+      
     },
     button: {
 fontSize:'1.5rem',
@@ -106,82 +133,38 @@ marginRight: '3.0rem',
 }));
 
 
-
 function App() {
   const [currentFrame, setCurrentFrame] = useState(0)
 
     const classes = useStyles();
-    const [open, setOpen] = React.useState(false);
     const handleOpen = () => {
+      setOpen(true);
+    };
+
+  
+  
+    window.addEventListener('load', (TransitionUp) => {
+    });
+  
+    const [open, setOpen] = React.useState(false);
+    const [transition, setTransition] = React.useState(undefined);
+  
+    const handleClick = (Transition) => () => {
+      setTransition(() => Transition);
       setOpen(true);
     };
   
     const handleClose = () => {
       setOpen(false);
     };
-
-
-
-    let nav = useRef(null)
-
-    useEffect(() => {
+  
     
-    let nav = document.getElementById("navigation");
-    nav.addEventListener("click", animateIn);
-    
-    
-    }, [])
-    
-    
-    
-    function animateIn(e) {
-        e.stopPropagation();
-        gsap.to(nav, { // no Max/Lite
-          duration: 1.3, // duration in vars parameter
-          width: 300, // no need for "" around numerical values unless you need to add units
-          height: 300,
-          borderTopLeftRadius: "30% 29%",
-          borderTopRightRadius: "70% 26%",
-          borderBottomRightRadius: "29% 74%",
-          borderBottomLeftRadius: "71%",
-          ease: "elastic" // use the condensed form for strings
-        });
-      
-        gsap.to(nav, {
-          duration: 0.4,
-          opacity: 1,
-          ease: "none"
-        }).delay(0.45);
-      }
-    
-    function animateOut() {
-        gsap.to(nav, {
-            duration: 0.5, 
-        width: 30,
-        height: 30,
-        borderTopLeftRadius: "10%",
-        borderTopRightRadius: "10%",
-        borderBottomRightRadius: "10%",
-        borderBottomLeftRadius: "10%",
-        ease: "Power2"
-      });
-    
-      gsap.to(nav, {
-            duration: 0.2, 
-        opacity: 0,
-        ease: "Linear"
-      });
-    }
-    
-    window.addEventListener("click", function() {
-      //Hide the menus if visible
-      animateOut();
-    });
     
   return (
     
       <div>
-
+        
+     
 <div id="myPageContent" class="container-fluid">
 <section id="home">
 	<AppBar position="static" className={classes.totalmenu} >
@@ -204,23 +187,7 @@ function App() {
     
     </div>
      </Typography>
-    
-  <nav rel={el => {nav = el}} id="navigation">
-	<ul>
-		<li>
-			<a href="#">Menu link</a>
-		</li>
-		<li>
-			<a href="#">And another</a>
-		</li>
-		<li>
-			<a href="#">One more</a>
-		</li>
-		<li>
-			<a href="#">Ok last one</a>
-		</li>
-	</ul>
-</nav>
+ 
 
      <Button id="contact" onClick={handleOpen} className={classes.button} color="inherit">Contact</Button>
 
@@ -239,49 +206,35 @@ function App() {
         <Fade in={open}>
           <div className={classes.paper}>
             <h2 id="transition-modal-title">Contact Me.</h2>
+            <hr />
 
-
-
-            {currentFrame === 0 && 
-      <main>
-        <form>
-  
-<Button onClick={() => setCurrentFrame(currentFrame + 1)} className={classes.buttonContact} variant="contained" color="secondary">
-Phone   <PhoneInTalkIcon/>
-
-      </Button>
-               
-        </form>
-      </main>
-    }
-    {currentFrame === 1 && 
-
-
-        <main>
-        
- 
-        <Button className={classes.buttonContact} variant="contained" color="secondary">
-<a href="tel:1-562-867-5309">1-562-867-5309</a>
-      </Button>
-               
-        </main>
-
-
-    }
-   
-
-
-
-
-
-
-     
-<button class="btn blue">Send Message
-  <i class="fa fa-rss fa-fw"></i>
-</button>
-            <p id="transition-modal-description"> Email: Social icons.</p>
+      {/*CONTACT FORM*/}
+            <form className={classes.root} style={{ width: '100%' }} noValidate autoComplete="off">
+      <TextField id="filled-basic" label="First Name" variant="filled" />
+      <br />
+      <TextField id="filled-basic" label="Last Name" variant="filled" />
+      <br />
+      <TextField fullWidth id="filled-basic"  label="Email" variant="filled"  />
+      <br />
+      <TextField
+          id="filled-textarea"
+          label="Message"
+          placeholder=""
+          multiline
+          variant="filled"
+        />
+        <br />
+<Button display="flex" justifyContent="center" variant="contained" color="secondary">
+Send Message      </Button>
+<hr />
+<LinkedInIcon fontSize="large"/>
+<TwitterIcon fontSize="large" />
+    </form>
+    
           </div>
         </Fade>
+       
+      
       </Modal>
 
 
@@ -289,7 +242,15 @@ Phone   <PhoneInTalkIcon/>
 
   </Toolbar>
 </AppBar>
-	
+<div> <Button severity="warning" onClick={handleClick(TransitionUp)}></Button>
+      <Snackbar
+        open={open}
+        TransitionComponent={transition}
+        severity="warning"
+        fontSize="large"
+        message="Currently Looking for Work 😊"
+        key={transition ? transition.name : ''}
+      /></div>
 <div id='stars'></div>
 <div id='stars2'></div>
 <div id='stars3'></div>
@@ -325,26 +286,8 @@ Phone   <PhoneInTalkIcon/>
 </div>
 
 <div class="BIO">
-  BIO
-  shadowsfsdf
-  s
-  dfs
-  dfs
-  d
-  d
-  describedbyd
-  d
-  describedbyd
-  d
-  d
-  d
-  d
-  describedbyd
-  d
-  describedbyd
-  d
-  describedbyd
-  d
+  BIO/Skills section
+  
 
 </div>
       
