@@ -12,7 +12,7 @@ import Color from 'color';
 import Badge from '@material-ui/core/Badge';
 import Avatar from '@material-ui/core/Avatar';
 import { withStyles } from '@material-ui/core/styles';
-import './style.css';
+import './style.scss';
 import logo from './imgs/logo.png';
 import { shadows } from '@material-ui/system';
 import './contact.css';
@@ -31,8 +31,10 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import Snackbar from '@material-ui/core/Snackbar';
 import Slide from '@material-ui/core/Slide';
-
-
+import Paper from '@material-ui/core/Paper';
+import Switch from '@material-ui/core/Switch';
+import Grow from '@material-ui/core/Grow';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
 
 function TransitionUp(props) {
   return <Slide {...props} direction="up" />;
@@ -87,6 +89,20 @@ const StyledBadge = withStyles((theme) => ({
   }))(Avatar);
 
 const useStyles = makeStyles((theme) => ({
+  
+  container: {
+    display: 'flex',
+  },
+  
+  svg: {
+    width: 100,
+    height: 100,
+  },
+  polygon: {
+    fill: theme.palette.common.white,
+    stroke: theme.palette.divider,
+    strokeWidth: 1,
+  },
   modal: {
     display: 'flex',
     alignItems: 'center',
@@ -106,7 +122,13 @@ const useStyles = makeStyles((theme) => ({
           margin: theme.spacing(1),
           width: '25ch',
         },
-      
+        container: {
+          display: 'flex',
+        },
+        svg: {
+          width: 100,
+          height: 100,
+        },
     },
     button: {
 fontSize:'1.5rem',
@@ -158,8 +180,10 @@ function App() {
       setOpen(false);
     };
   
-    
-    
+    const [checked, setChecked] = React.useState(false);
+    const handleChange = () => {
+      setChecked((prev) => !prev);
+    };
   return (
     
       <div>
@@ -284,13 +308,58 @@ Send Message      </Button>
 	
 </section>
 </div>
+<Paper elevation={3} variant="outlined">
+  
+<header>
+  <h1>Material header</h1>
+</header>
 
-<div class="BIO">
-  BIO/Skills section
+  <div className={classes.root}>
+      <FormControlLabel
+        control={<Switch checked={checked} onChange={handleChange} />}
+        label="Show"
+      />
+      <div className={classes.container}>
+        <Grow in={checked}>
+          <Paper elevation={4} className={classes.paper}>
+            <svg className={classes.svg}>
+              <polygon points="0,100 50,00, 100,100" className={classes.polygon} />
+            </svg>
+          </Paper>
+        </Grow>
+        {/* Conditionally applies the timeout prop to change the entry speed. */}
+        <Grow
+          in={checked}
+          style={{ transformOrigin: '0 0 0' }}
+          {...(checked ? { timeout: 1000 } : {})}
+        >
+          <Paper elevation={4} className={classes.paper}>
+            <svg className={classes.svg}>
+              <polygon points="0,100 50,00, 100,100" className={classes.polygon} />
+            </svg>
+          </Paper>
+        </Grow>
+        <Grow
+          in={checked}
+          style={{ transformOrigin: '0 0 0' }}
+          {...(checked ? { timeout: 2000 } : {})}
+        >
+          <Paper elevation={4} className={classes.paper}>
+            <svg className={classes.svg}>
+              <polygon points="0,100 50,00, 100,100" className={classes.polygon} />
+            </svg>
+          </Paper>
+        </Grow>
+      </div>
+    </div>
+  
+  
+  </Paper> 
+{/* <div class="BIO">
   
 
 </div>
-      
+       */}
     
 
 
