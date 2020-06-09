@@ -35,6 +35,9 @@ import Paper from '@material-ui/core/Paper';
 import Switch from '@material-ui/core/Switch';
 import Grow from '@material-ui/core/Grow';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
+import { ReactComponent as Logo } from './imgs/1.svg';
+
+
 
 function TransitionUp(props) {
   return <Slide {...props} direction="up" />;
@@ -151,6 +154,10 @@ marginRight: '3.0rem',
         color: 'white',
         boxShadow: 'none',
         backgroundColor: 'transparent'
+    },
+    bio: {
+      margin: '50px',
+      width: '10em'
     }
 }));
 
@@ -308,51 +315,33 @@ Send Message      </Button>
 	
 </section>
 </div>
-<Paper elevation={3} variant="outlined">
+<Paper boxShadow={3} elevation={3} variant="outlined">
   
 <header>
-  <h1>Material header</h1>
+  <h1>BIO / SKILLS</h1>
 </header>
 
-  <div className={classes.root}>
-      <FormControlLabel
-        control={<Switch checked={checked} onChange={handleChange} />}
-        label="Show"
-      />
-      <div className={classes.container}>
-        <Grow in={checked}>
-          <Paper elevation={4} className={classes.paper}>
-            <svg className={classes.svg}>
-              <polygon points="0,100 50,00, 100,100" className={classes.polygon} />
-            </svg>
-          </Paper>
-        </Grow>
-        {/* Conditionally applies the timeout prop to change the entry speed. */}
-        <Grow
-          in={checked}
-          style={{ transformOrigin: '0 0 0' }}
-          {...(checked ? { timeout: 1000 } : {})}
-        >
-          <Paper elevation={4} className={classes.paper}>
-            <svg className={classes.svg}>
-              <polygon points="0,100 50,00, 100,100" className={classes.polygon} />
-            </svg>
-          </Paper>
-        </Grow>
-        <Grow
-          in={checked}
-          style={{ transformOrigin: '0 0 0' }}
-          {...(checked ? { timeout: 2000 } : {})}
-        >
-          <Paper elevation={4} className={classes.paper}>
-            <svg className={classes.svg}>
-              <polygon points="0,100 50,00, 100,100" className={classes.polygon} />
-            </svg>
-          </Paper>
-        </Grow>
-      </div>
+  <div className={classes.bio}>
+      
+
+
+     <Logo
+     
+     
+     
+     >
+       
+       
+       
+       
+       </Logo>
+
+
+
+
     </div>
-  
+  <div>     test
+</div>
   
   </Paper> 
 {/* <div class="BIO">
