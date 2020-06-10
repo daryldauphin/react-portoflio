@@ -155,9 +155,14 @@ marginRight: '3.0rem',
         boxShadow: 'none',
         backgroundColor: 'transparent'
     },
+    first:{
+      height: '100vh'
+    },
     bio: {
-      margin: '50px',
-      width: '10em'
+      display: 'flex',
+    },
+    svg: {
+      padding: '3em 0 1em 1em'
     }
 }));
 
@@ -315,34 +320,26 @@ Send Message      </Button>
 	
 </section>
 </div>
-<Paper boxShadow={3} elevation={3} variant="outlined">
+<Paper  boxShadow={3} elevation={3} variant="outlined">
   
 <header>
   <h1>BIO / SKILLS</h1>
 </header>
+<div className={classes.first}>
 
   <div className={classes.bio}>
       
 
 
-     <Logo
-     
-     
-     
-     >
-       
-       
-       
-       
-       </Logo>
-
-
+     <Logo className={classes.svg}/>
+     <div>Who am I?</div>
 
 
     </div>
-  <div>     test
 </div>
   
+<div>Skills</div>
+
   </Paper> 
 {/* <div class="BIO">
   
