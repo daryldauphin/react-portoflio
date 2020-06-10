@@ -320,12 +320,11 @@ Send Message      </Button>
 	
 </section>
 </div>
-<Paper  boxShadow={3} elevation={3} variant="outlined">
+<Paper className={classes.first} boxShadow={3} elevation={3} variant="outlined">
   
 <header>
   <h1>BIO / SKILLS</h1>
 </header>
-<div className={classes.first}>
 
   <div className={classes.bio}>
       
@@ -336,8 +335,6 @@ Send Message      </Button>
 
 
     </div>
-</div>
-  
 <div>Skills</div>
 
   </Paper> 
