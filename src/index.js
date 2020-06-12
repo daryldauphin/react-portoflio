@@ -35,7 +35,28 @@ import Paper from '@material-ui/core/Paper';
 import Switch from '@material-ui/core/Switch';
 import Grow from '@material-ui/core/Grow';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import { ReactComponent as Logo } from './imgs/1.svg';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import { ReactComponent as Logo1 } from './imgs/skills/1.svg';
+import { ReactComponent as Logo2 } from './imgs/skills/2.svg';
+import { ReactComponent as Logo3 } from './imgs/skills/3.svg';
+import { ReactComponent as Logo4 } from './imgs/skills/4.svg';
+import { ReactComponent as Logo5 } from './imgs/skills/5.svg';
+import { ReactComponent as Logo6 } from './imgs/skills/6.svg';
+import { ReactComponent as Logo7 } from './imgs/skills/7.svg';
+import { ReactComponent as Logo8 } from './imgs/skills/8.svg';
+import { ReactComponent as Logo9 } from './imgs/skills/9.svg';
+import { ReactComponent as Logo10 } from './imgs/skills/10.svg';
+import { ReactComponent as Logo11 } from './imgs/skills/11.svg';
+import { ReactComponent as Logo12 } from './imgs/skills/12.svg';
+
+
+
+
+
+
+
 
 
 
@@ -156,14 +177,41 @@ marginRight: '3.0rem',
         backgroundColor: 'transparent'
     },
     first:{
-      height: '100vh'
+  
+
     },
     bio: {
+      width: '100%',
       display: 'flex',
-    },
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      alignItems: 'flex-end',
+      justifyContent: 'center'
+      
+
+        },
     svg: {
-      padding: '3em 0 1em 1em'
-    }
+      padding: '3em 1em 1em 1em'
+    },
+    second: {
+      textAlign: 'left'
+    },
+    reactcard: {
+      minWidth: 315,
+      height: '350px',
+      margin: '0.5em',
+      fontSize: '30px'
+      
+    },
+    bullet: {
+      display: 'inline-block',
+      margin: '0 2px',
+      transform: 'scale(0.8)',
+    },
+    titl: {
+      fontSize: 20,
+    },
+    
 }));
 
 
@@ -203,7 +251,7 @@ function App() {
      
 <div id="myPageContent" class="container-fluid">
 <section id="home">
-	<AppBar position="static" className={classes.totalmenu} >
+	<AppBar position="fixed" className={classes.totalmenu} >
   <Toolbar>
     <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
     </IconButton>
@@ -223,7 +271,10 @@ function App() {
     
     </div>
      </Typography>
- 
+     
+     <Button id="contact"  className={classes.button} color="inherit">Skills</Button>
+
+     <Button id="contact"  className={classes.button} color="inherit">Projects</Button>
 
      <Button id="contact" onClick={handleOpen} className={classes.button} color="inherit">Contact</Button>
 
@@ -322,7 +373,7 @@ Send Message      </Button>
 </div>
 <Paper className={classes.first} boxShadow={3} elevation={3} variant="outlined">
   
-<header>
+<header id="header">
   <h1>SKILLS</h1>
 </header>
 
@@ -330,197 +381,189 @@ Send Message      </Button>
       
 
 
-     <Logo className={classes.svg}/>
-     <div>Who am I?</div>
+     
+     <Card className={classes.reactcard} >
+      <CardContent>
+        <Logo1
+        width="275" height="275" 
+        >
+          
+          
+          
+          </Logo1>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Learn More</Button>
+      </CardActions>
+    </Card>
 
+    <Card className={classes.reactcard}>
+      <CardContent>
+      <Logo2
+        width="275" height="275" 
+        >
+          
+          
+          
+          </Logo2>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Learn More</Button>
+      </CardActions>
+    </Card>
+    <Card className={classes.reactcard}>
+      <CardContent>
+      <Logo3
+        width="275" height="275" 
+        >
+          
+          
+          
+          </Logo3>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Learn More</Button>
+      </CardActions>
+    </Card>
+    <Card className={classes.reactcard}>
+      <CardContent>
+      <Logo4
+        width="275" height="275" 
+        >
+          
+          
+          
+          </Logo4>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Learn More</Button>
+      </CardActions>
+    </Card>
+    <Card className={classes.reactcard}>
+      <CardContent>
+      <Logo5
+        width="275" height="275" 
+        >
+          
+          
+          
+          </Logo5>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Learn More</Button>
+      </CardActions>
+    </Card>
+    <Card className={classes.reactcard}>
+      <CardContent>
+      <Logo6
+        width="275" height="275" 
+        >
+          
+          
+          
+          </Logo6>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Learn More</Button>
+      </CardActions>
+    </Card>
 
-    </div>
-<div class="wrap">
-		<div class="comp">
-			<div class="monitor">
-				<div class="mid">
-					<div class="site">
-						<div class="topbar">
-							<div class="cerrar">
-								<div class="circl"></div>
-								<div class="circl"></div>
-								<div class="circl"></div>
-							</div>
-						</div>
-						<div class="inhead">
-							<div class="mid">
-								<div class="item"></div>
-							</div>
-							<div class="mid txr">
-								<div class="item"></div>
-								<div class="item"></div>
-								<div class="item"></div>
-								<div class="item"></div>
-							</div>
-						</div>
-						<div class="inslid">
-							
-						</div>
-						<div class="incont">
-							<div class="item"></div>
-							<div class="item"></div>
-							<div class="item"></div>
-							<div class="item"></div>
-							<div class="wid">
-								<div class="itwid">
-									<div>
-										<div class="contfoot"></div>
-									</div>
-								</div>
-								<div class="itwid">
-									<div>
-										<div class="contfoot"></div>
-									</div>
-								</div>
-								<div class="itwid">
-									<div>
-										<div class="contfoot"></div>
-									</div>
-								</div>
-								<div class="clearfix"></div>
-							</div>
-							<div class="infoot">
-								
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="mid codigo">
-					<div class="line">
-						<div class="item var"></div>
-						<div class="item cont"></div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="line">
-						<div class="item min var"></div>
-						<div class="item min fun"></div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="line">
-						<div class="item min var"></div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="line">
-						<div class="item var"></div>
-						<div class="item atr"></div>
-						<div class="item cont"></div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="line tab1">
-						<div class="item min atr"></div>
-						<div class="item lrg fun"></div>
-						<div class="item min fun"></div>
-						<div class="item lrg cont"></div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="line tab1">
-						<div class="item lrg atr"></div>
-						<div class="item min fun"></div>
-						<div class="item min cont"></div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="line tab1">
-						<div class="item atr"></div>
-						<div class="item min fun"></div>
-						<div class="item atr"></div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="line tab1">
-						<div class="item min atr"></div>
-						<div class="item min cont"></div>
-						<div class="item lrg atr"></div>
-						<div class="item  fun"></div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="line tab1">
-						<div class="item min atr"></div>
-						<div class="item lrg fun"></div>
-						<div class="item lrg cont"></div>
-						<div class="item min fun"></div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="line tab1">
-						<div class="item min var"></div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="line tab1">
-						<div class="item min var"></div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="line tab2">
-						<div class="item min var"></div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="line tab2">
-						<div class="item min atr"></div>
-						<div class="item min fun"></div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="line tab3">
-						<div class="item min atr"></div>
-						<div class="item min fun"></div>
-						<div class="item lrg fun"></div>
-						<div class="item lrg cont"></div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="line tab3">
-						<div class="item min atr"></div>
-						<div class="item min fun"></div>
-						<div class="item lrg atr"></div>
-						<div class="item lrg cont"></div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="line tab4">
-						<div class="item min fun"></div>
-						<div class="item lrg atr"></div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="line tab1">
-						<div class="item atr"></div>
-						<div class="item var"></div>
-						<div class="item cont"></div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="line tab3">
-						<div class="item min var"></div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="line tab4">
-						<div class="item min atr"></div>
-						<div class="item min fun"></div>
-						<div class="item lrg atr"></div>
-						<div class="item lrg cont"></div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="line">
-						<div class="item min var"></div>
-						<div class="clearfix"></div>
-					</div>
-					
-				</div>
-			</div>
-			<div class="base">
-				
-			</div>
-		</div>
-	</div>
+    <Card className={classes.reactcard} >
+      <CardContent>
+      <Logo7
+        width="275" height="275" 
+        >
+          
+          
+          
+          </Logo7>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Learn More</Button>
+      </CardActions>
+    </Card>
+
+    <Card className={classes.reactcard}>
+      <CardContent>
+      <Logo8
+        width="275" height="275" 
+        >
+          
+          
+          
+          </Logo8>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Learn More</Button>
+      </CardActions>
+    </Card>
+    <Card className={classes.reactcard}>
+      <CardContent>
+      <Logo9
+        width="275" height="275" 
+        >
+          
+          
+          
+          </Logo9>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Learn More</Button>
+      </CardActions>
+    </Card>
+    <Card className={classes.reactcard}>
+      <CardContent>
+      <Logo10
+        width="275" height="275" 
+        >
+          
+          
+          
+          </Logo10>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Learn More</Button>
+      </CardActions>
+    </Card>
+    <Card className={classes.reactcard}>
+      <CardContent>
+      <Logo11
+        width="275" height="275" 
+        >
+          
+          
+          
+          </Logo11>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Learn More</Button>
+      </CardActions>
+    </Card>
+    <Card className={classes.reactcard}>
+      <CardContent>
+      <Logo12
+        width="275" height="275" 
+        >
+          
+          
+          
+          </Logo12>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Learn More</Button>
+      </CardActions>
+    </Card>
+</div>
   </Paper> 
-{/* <div class="BIO">
-  
+<Paper>
+  <div>
+  <header id="header">
+  <h1>PROJECTS</h1>
+</header>
 
+  </div>
+</Paper>
 </div>
-       */}
-    
-
-
-
-</div>
-
 
   );
 }
