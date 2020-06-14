@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useRef } from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import ReactDOM from 'react-dom';
 import { gsap } from 'gsap/all';
 import { makeStyles } from '@material-ui/core/styles';
@@ -50,8 +50,8 @@ import { ReactComponent as Logo9 } from './imgs/skills/9.svg';
 import { ReactComponent as Logo10 } from './imgs/skills/10.svg';
 import { ReactComponent as Logo11 } from './imgs/skills/11.svg';
 import { ReactComponent as Logo12 } from './imgs/skills/12.svg';
-
-
+import Arrow from './components/atoms/Arrow/Arrow';
+import Up from './components/atoms/Arrow/Up';
 
 
 
@@ -167,6 +167,7 @@ marginRight: '3.0rem',
           },
     menuButton: {
         marginRight: theme.spacing(2),
+
     },
     title: {
         flexGrow: 1,
@@ -251,7 +252,7 @@ function App() {
      
 <div id="myPageContent" class="container-fluid">
 <section id="home">
-	<AppBar position="fixed" className={classes.totalmenu} >
+	<AppBar position="static" className={classes.totalmenu} >
   <Toolbar>
     <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
     </IconButton>
@@ -272,9 +273,9 @@ function App() {
     </div>
      </Typography>
      
-     <Button id="contact"  className={classes.button} color="inherit">Skills</Button>
+     <Button href="#header" id="contact"  className={classes.button} color="inherit">Skills</Button>
 
-     <Button id="contact"  className={classes.button} color="inherit">Projects</Button>
+     <Button href="#projects" id="contact"  className={classes.button} color="inherit">Projects</Button>
 
      <Button id="contact" onClick={handleOpen} className={classes.button} color="inherit">Contact</Button>
 
@@ -341,7 +342,8 @@ Send Message      </Button>
 <div id='stars'></div>
 <div id='stars2'></div>
 <div id='stars3'></div>
-	
+<Arrow />
+<Up />
 <div id="textSlider" class="row">
 					<div class="col-xs-12 col-sm-12 col-md-3 col-lg-4 iamCol">
 						<p>Daryl </p>
@@ -370,7 +372,8 @@ Send Message      </Button>
 	
 	
 </section>
-</div>
+</div>  
+
 <Paper className={classes.first} boxShadow={3} elevation={3} variant="outlined">
   
 <header id="header">
@@ -557,9 +560,10 @@ Send Message      </Button>
   </Paper> 
 <Paper>
   <div>
-  <header id="header">
+  <header id="projects">
   <h1>PROJECTS</h1>
 </header>
+
 
   </div>
 </Paper>
