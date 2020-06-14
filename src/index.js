@@ -279,7 +279,7 @@ function App() {
 
      <Button id="contact" onClick={handleOpen} className={classes.button} color="inherit">Contact</Button>
 
-     <Modal
+     {/* <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
         className={classes.modal}
@@ -322,10 +322,10 @@ Send Message      </Button>
         </Fade>
        
       
-      </Modal>
+      </Modal> */}
 
 
-{/* <CustomModal useStyles={useStyles} open={open} handleClose={handleClose} Backdrop={Backdrop}/> */}
+<CustomModal useStyles={useStyles} open={open} handleClose={handleClose} Backdrop={Backdrop}/>
 
   </Toolbar>
 </AppBar>
