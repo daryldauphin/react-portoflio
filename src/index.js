@@ -52,7 +52,7 @@ import { ReactComponent as Logo11 } from './imgs/skills/11.svg';
 import { ReactComponent as Logo12 } from './imgs/skills/12.svg';
 import Arrow from './components/atoms/Arrow/Arrow';
 import Up from './components/atoms/Arrow/Up';
-
+import CustomModal from './components/organisms/modals/Modal'
 
 
 
@@ -296,14 +296,13 @@ function App() {
             <h2 id="transition-modal-title">Contact Me.</h2>
             <hr />
 
-      {/*CONTACT FORM*/}
             <form className={classes.root} style={{ width: '100%' }} noValidate autoComplete="off">
       <TextField id="filled-basic" label="First Name" variant="filled" />
       <br />
       <TextField id="filled-basic" label="Last Name" variant="filled" />
       <br />
-      <TextField fullWidth id="filled-basic"  label="Email" variant="filled"  />
-      <br />
+      
+      <TextField />
       <TextField
           id="filled-textarea"
           label="Message"
@@ -326,7 +325,7 @@ Send Message      </Button>
       </Modal>
 
 
-
+{/* <CustomModal useStyles={useStyles} open={open} handleClose={handleClose} Backdrop={Backdrop}/> */}
 
   </Toolbar>
 </AppBar>
@@ -342,8 +341,10 @@ Send Message      </Button>
 <div id='stars'></div>
 <div id='stars2'></div>
 <div id='stars3'></div>
+
 <Arrow />
 <Up />
+
 <div id="textSlider" class="row">
 					<div class="col-xs-12 col-sm-12 col-md-3 col-lg-4 iamCol">
 						<p>Daryl </p>
