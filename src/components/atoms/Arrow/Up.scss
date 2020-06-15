@@ -1,9 +1,10 @@
 
 .up {
 	position:fixed;
-  bottom:100px;
+  bottom:50px;
   right: 100px;
   cursor:pointer;
+  display: none;
   }
   .up:before,
   .up:after{
@@ -15,11 +16,27 @@
 	height: 7px;
 	border-radius: 10px;
 	display: block;
-	background: black;
-	transform:rotate(45deg);
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 500% 500%;
+	animation: gradient 15s ease infinite;	transform:rotate(45deg);
     -webkit-transform:rotate(45deg); 
 	
   }
+
+  @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
   .up:after{
 	right: inherit;
 	left: -24px;
@@ -28,33 +45,34 @@
   }
    
   .animate{
-	-webkit-animation: bounce 2s infinite;
-    animation: bounce 2s both infinite;
+	-webkit-animation: upbounce 2s infinite;
+    animation: upbounce 2s both infinite;
     
+
   }
    
    
-  @-webkit-keyframes bounce {
+  @-webkit-keyframes upbounce {
 	  0% {-webkit-transform: translateY(0); opacity: 0;}
 	60% { opacity: 1;}
-	100% {-webkit-transform: translateY(60px); opacity: 0}
+	100% {-webkit-transform: translateY(-60px); opacity: 0}
   }
    
-  @-moz-keyframes bounce {
+  @-moz-keyframes upbounce {
 	  0% {-webkit-transform: translateY(0); opacity: 0;}
 	60% { opacity: 1;}
-	100% {-webkit-transform: translateY(60px); opacity: 0}
+	100% {-webkit-transform: translateY(-60px); opacity: 0}
   }
    
-  @-o-keyframes bounce {
+  @-o-keyframes upbounce {
 	  0% {-webkit-transform: translateY(0); opacity: 0;}
 	60% { opacity: 1;}
-	100% {-webkit-transform: translateY(60px); opacity: 0}
+	100% {-webkit-transform: translateY(-60px); opacity: 0}
   }
-  @keyframes bounce {
+  @keyframes upbounce {
 	  0% {-webkit-transform: translateY(0); opacity: 0;}
 	60% { opacity: 1;}
-	100% {-webkit-transform: translateY(60px); opacity: 0}
+	100% {-webkit-transform: translateY(-60px); opacity: 0}
   }
 
  

@@ -1,40 +1,25 @@
-import React, {useEffect, useState, useRef} from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import { gsap } from 'gsap/all';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import Color from 'color';
 import Badge from '@material-ui/core/Badge';
 import Avatar from '@material-ui/core/Avatar';
 import { withStyles } from '@material-ui/core/styles';
 import './style.scss';
 import logo from './imgs/logo.png';
-import { shadows } from '@material-ui/system';
-import './contact.css';
-import { TweenLite, Linear } from "gsap";
-import { TimelineMax, CSSPlugin, ScrollToPlugin, Draggable } from "gsap/all"; 
-import { TweenMax, TimelineLite, Power3, Elastic } from "gsap";
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
-import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
-import ThreeDRotation from '@material-ui/icons/ThreeDRotation';
-import PhoneInTalkIcon from '@material-ui/icons/PhoneInTalk';
-import {animateIn, animateOut} from './gsap'
 import TextField from '@material-ui/core/TextField';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import Snackbar from '@material-ui/core/Snackbar';
 import Slide from '@material-ui/core/Slide';
 import Paper from '@material-ui/core/Paper';
-import Switch from '@material-ui/core/Switch';
-import Grow from '@material-ui/core/Grow';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -53,20 +38,6 @@ import { ReactComponent as Logo12 } from './imgs/skills/12.svg';
 import Arrow from './components/atoms/Arrow/Arrow';
 import Up from './components/atoms/Arrow/Up';
 import CustomModal from './components/organisms/modals/Modal'
-
-
-
-
-
-
-
-function TransitionUp(props) {
-  return <Slide {...props} direction="up" />;
-}
-
-
-
-
 
 
 const StyledBadge = withStyles((theme) => ({
@@ -97,20 +68,6 @@ const StyledBadge = withStyles((theme) => ({
       },
     },
   }))(Badge);
-  
-  const SmallAvatar = withStyles((theme) => ({
-    root: {
-      
-      width: 22,
-      height: 22,
-      border: `2px solid ${theme.palette.background.paper}`,
-      width: '100%',
-    '& > * + *': {
-      marginTop: theme.spacing(2),
-    },
-      
-    },
-  }))(Avatar);
 
 const useStyles = makeStyles((theme) => ({
   
@@ -215,6 +172,9 @@ marginRight: '3.0rem',
     
 }));
 
+function TransitionUp(props) {
+  return <Slide {...props} direction="up" />;
+}
 
 function App() {
   const [currentFrame, setCurrentFrame] = useState(0)
@@ -279,7 +239,7 @@ function App() {
 
      <Button id="contact" onClick={handleOpen} className={classes.button} color="inherit">Contact</Button>
 
-     {/* <Modal
+     <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
         className={classes.modal}
@@ -301,8 +261,9 @@ function App() {
       <br />
       <TextField id="filled-basic" label="Last Name" variant="filled" />
       <br />
+      <TextField id="filled-basic" label="Email" variant="filled" />
+        <br />
       
-      <TextField />
       <TextField
           id="filled-textarea"
           label="Message"
@@ -322,10 +283,10 @@ Send Message      </Button>
         </Fade>
        
       
-      </Modal> */}
+      </Modal>
 
 
-<CustomModal useStyles={useStyles} open={open} handleClose={handleClose} Backdrop={Backdrop}/>
+{/* <CustomModal useStyles={useStyles} open={open} handleClose={handleClose} Backdrop={Backdrop}/> */}
 
   </Toolbar>
 </AppBar>
@@ -384,17 +345,29 @@ Send Message      </Button>
   <div className={classes.bio}>
       
 
-
+<div class="card--container">
+  <div class="card--flipper">
+    <div class="side--a">
+      <i class="fa fa-twitter"></i>
+      <a target="_blank" id="twitter" href="https://twitter.com/TJ_egan">
+        <p>TJ Egan</p>
+        <p>@tjegan</p>
+      </a>
+    </div>
+    <div class="side--b">
+      <i class="fa fa-spotify"></i>
+      <a target="_blank" id="spotify" href="https://play.spotify.com/user/tj_egan">
+        <p>tj_egan</p>
+      </a>
+    </div>
+  </div>
+</div>
      
      <Card className={classes.reactcard} >
       <CardContent>
         <Logo1
-        width="275" height="275" 
-        >
-          
-          
-          
-          </Logo1>
+        width="275" height="275">
+        </Logo1>
       </CardContent>
       <CardActions>
         <Button size="small">Learn More</Button>

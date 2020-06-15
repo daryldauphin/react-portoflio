@@ -32,7 +32,8 @@ $(document).ready(function(){
 
 
     return (
-        <div id="up" class=" animate up"></div>
+             <div id="up" class=" animate up"></div>
+
 
     )
     
