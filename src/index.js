@@ -10,6 +10,7 @@ import Badge from '@material-ui/core/Badge';
 import Avatar from '@material-ui/core/Avatar';
 import { withStyles } from '@material-ui/core/styles';
 import './style.scss';
+import Link from '@material-ui/core/Link';
 import logo from './imgs/logo.png';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
@@ -38,7 +39,7 @@ import { ReactComponent as Logo12 } from './imgs/skills/12.svg';
 import Arrow from './components/atoms/Arrow/Arrow';
 import Up from './components/atoms/Arrow/Up';
 import CustomModal from './components/organisms/modals/Modal'
-
+import thisday from './imgs/SAMPLE2-new-600x600.png'; // Tell webpack this JS file uses this image
 
 const StyledBadge = withStyles((theme) => ({
     badge: {
@@ -95,6 +96,8 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: theme.shadows[5],
     borderRadius: '5px',
     padding: theme.spacing(2, 4, 3),
+    width: '100%',
+	  margin:'0.5em'
   },
     root: {
       
@@ -148,6 +151,7 @@ marginRight: '3.0rem',
       
 
         },
+
     svg: {
       padding: '3em 1em 1em 1em'
     },
@@ -157,9 +161,8 @@ marginRight: '3.0rem',
     reactcard: {
       minWidth: 315,
       height: '350px',
-      margin: '0.5em',
-      fontSize: '30px'
-      
+      fontSize: '30px',
+
     },
     bullet: {
       display: 'inline-block',
@@ -205,11 +208,11 @@ function App() {
     const handleChange = () => {
       setChecked((prev) => !prev);
     };
+    const preventDefault = (event) => event.preventDefault();
   return (
     
-      <div>
-        
-     
+      
+    <>
 <div id="myPageContent" class="container-fluid">
 <section id="home">
 	<AppBar position="static" className={classes.totalmenu} >
@@ -342,206 +345,338 @@ Send Message      </Button>
   <h1>SKILLS</h1>
 </header>
 
-  <div className={classes.bio}>
-      
+<div className={classes.bio}>
 
-<div class="card--container">
-  <div class="card--flipper">
-    <div class="side--a">
-      <i class="fa fa-twitter"></i>
-      <a target="_blank" id="twitter" href="https://twitter.com/TJ_egan">
-        <p>TJ Egan</p>
-        <p>@tjegan</p>
-      </a>
-    </div>
-    <div class="side--b">
-      <i class="fa fa-spotify"></i>
-      <a target="_blank" id="spotify" href="https://play.spotify.com/user/tj_egan">
-        <p>tj_egan</p>
-      </a>
-    </div>
-  </div>
+
+
+<div class="cContainer">
+<div class="card">
+
+
+
+
+<Card className={classes.reactcard}>
+       <CardContent>
+       <Logo1
+         width="275" height="275" 
+         >
+           
+           
+           
+           </Logo1>
+       </CardContent>
+       <CardActions>
+         <Button size="small">Learn More</Button>
+       </CardActions>
+     </Card>
+     </div>
 </div>
-     
-     <Card className={classes.reactcard} >
-      <CardContent>
-        <Logo1
-        width="275" height="275">
-        </Logo1>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
 
-    <Card className={classes.reactcard}>
-      <CardContent>
-      <Logo2
-        width="275" height="275" 
-        >
-          
-          
-          
-          </Logo2>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-    <Card className={classes.reactcard}>
-      <CardContent>
-      <Logo3
-        width="275" height="275" 
-        >
-          
-          
-          
-          </Logo3>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-    <Card className={classes.reactcard}>
-      <CardContent>
-      <Logo4
-        width="275" height="275" 
-        >
-          
-          
-          
-          </Logo4>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-    <Card className={classes.reactcard}>
-      <CardContent>
-      <Logo5
-        width="275" height="275" 
-        >
-          
-          
-          
-          </Logo5>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-    <Card className={classes.reactcard}>
-      <CardContent>
-      <Logo6
-        width="275" height="275" 
-        >
-          
-          
-          
-          </Logo6>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
 
-    <Card className={classes.reactcard} >
-      <CardContent>
-      <Logo7
-        width="275" height="275" 
-        >
-          
-          
-          
-          </Logo7>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
+<div class="cContainer">
+<div class="card">
 
-    <Card className={classes.reactcard}>
-      <CardContent>
-      <Logo8
-        width="275" height="275" 
-        >
-          
-          
-          
-          </Logo8>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-    <Card className={classes.reactcard}>
-      <CardContent>
-      <Logo9
-        width="275" height="275" 
-        >
-          
-          
-          
-          </Logo9>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-    <Card className={classes.reactcard}>
-      <CardContent>
-      <Logo10
-        width="275" height="275" 
-        >
-          
-          
-          
-          </Logo10>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-    <Card className={classes.reactcard}>
-      <CardContent>
-      <Logo11
-        width="275" height="275" 
-        >
-          
-          
-          
-          </Logo11>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-    <Card className={classes.reactcard}>
-      <CardContent>
-      <Logo12
-        width="275" height="275" 
-        >
-          
-          
-          
-          </Logo12>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
+
+
+
+<Card className={classes.reactcard}>
+       <CardContent>
+       <Logo2
+         width="275" height="275" 
+         >
+           
+           
+           
+           </Logo2>
+       </CardContent>
+       <CardActions>
+         <Button size="small">Learn More</Button>
+       </CardActions>
+     </Card>
+     </div>
+</div>
+
+<div class="cContainer">
+<div class="card">
+
+
+
+
+<Card className={classes.reactcard}>
+       <CardContent>
+       <Logo3
+         width="275" height="275" 
+         >
+           
+           
+           
+           </Logo3>
+       </CardContent>
+       <CardActions>
+         <Button size="small">Learn More</Button>
+       </CardActions>
+     </Card>
+     </div>
+</div>
+
+
+<div class="cContainer">
+<div class="card">
+
+
+
+
+<Card className={classes.reactcard}>
+       <CardContent>
+       <Logo4
+         width="275" height="275" 
+         >
+           
+           
+           
+           </Logo4>
+       </CardContent>
+       <CardActions>
+         <Button size="small">Learn More</Button>
+       </CardActions>
+     </Card>
+     </div>
+</div>
+
+<div class="cContainer">
+<div class="card">
+
+
+
+
+<Card className={classes.reactcard}>
+       <CardContent>
+       <Logo5
+         width="275" height="275" 
+         >
+           
+           
+           
+           </Logo5>
+       </CardContent>
+       <CardActions>
+         <Button size="small">Learn More</Button>
+       </CardActions>
+     </Card>
+     </div>
+</div>
+
+
+<div class="cContainer">
+<div class="card">
+
+
+
+
+<Card className={classes.reactcard}>
+       <CardContent>
+       <Logo6
+         width="275" height="275" 
+         >
+           
+           
+           
+           </Logo6>
+       </CardContent>
+       <CardActions>
+         <Button size="small">Learn More</Button>
+       </CardActions>
+     </Card>
+     </div>
+</div>
+
+<div class="cContainer">
+<div class="card">
+
+
+
+
+<Card className={classes.reactcard}>
+       <CardContent>
+       <Logo7
+         width="275" height="275" 
+         >
+           
+           
+           
+           </Logo7>
+       </CardContent>
+       <CardActions>
+         <Button size="small">Learn More</Button>
+       </CardActions>
+     </Card>
+     </div>
+</div>
+
+
+<div class="cContainer">
+<div class="card">
+
+
+
+
+<Card className={classes.reactcard}>
+       <CardContent>
+       <Logo8
+         width="275" height="275" 
+         >
+           
+           
+           
+           </Logo8>
+       </CardContent>
+       <CardActions>
+         <Button size="small">Learn More</Button>
+       </CardActions>
+     </Card>
+     </div>
+</div>
+
+<div class="cContainer">
+<div class="card">
+
+
+
+
+<Card className={classes.reactcard}>
+       <CardContent>
+       <Logo9
+         width="275" height="275" 
+         >
+           
+           
+           
+           </Logo9>
+       </CardContent>
+       <CardActions>
+         <Button size="small">Learn More</Button>
+       </CardActions>
+     </Card>
+     </div>
+</div>
+
+
+<div class="cContainer">
+<div class="card">
+
+
+
+
+<Card className={classes.reactcard}>
+       <CardContent>
+       <Logo10
+         width="275" height="275" 
+         >
+           
+           
+           
+           </Logo10>
+       </CardContent>
+       <CardActions>
+         <Button size="small">Learn More</Button>
+       </CardActions>
+     </Card>
+     </div>
+</div>
+
+
+<div class="cContainer">
+<div class="card">
+
+
+
+
+<Card className={classes.reactcard}>
+       <CardContent>
+       <Logo11
+         width="275" height="275" 
+         >
+           
+           
+           
+           </Logo11>
+       </CardContent>
+       <CardActions>
+         <Button size="small">Learn More</Button>
+       </CardActions>
+     </Card>
+     </div>
+</div>
+
+<div class="cContainer">
+<div class="card">
+
+
+
+
+<Card className={classes.reactcard}>
+       <CardContent>
+       <Logo12
+         width="275" height="275" 
+         >
+           
+           
+           
+           </Logo12>
+       </CardContent>
+       <CardActions>
+         <Button size="small">Learn More</Button>
+       </CardActions>
+     </Card>
+     </div>
+</div>
+
 </div>
   </Paper> 
+  
 <Paper>
   <div>
   <header id="projects">
   <h1>PROJECTS</h1>
 </header>
 
+<div className={classes.bio}>
+      
 
-  </div>
-</Paper>
+<div class="cContainer">
+<div class="card">
+      <Card className={classes.reactcard} >
+       <CardContent>
+            <img width="275" height="275" src={thisday} alt="Logo" />
+       </CardContent>
+       <CardActions>
+         <Button href="https://thisday.design" onClick={('https://thisday.design', "_blank")} style ={{"color":"black"}} size="small">View Site</Button>
+         <Button size="small">Tools Used</Button>
+       </CardActions>
+     </Card>
+    </div>
+
+
 </div>
+     
+
+
+
+
+
+
+
+
+      
+ 
+
+
+
+ </div>
+</div>
+</Paper>
+
+</>
 
   );
 }
