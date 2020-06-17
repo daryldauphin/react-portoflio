@@ -267,7 +267,7 @@ function App() {
             <h2 id="transition-modal-title">Contact Me.</h2>
             <hr />
 
-            <form action="POST" method="post" data-netlify="true" className={classes.root} style={{ width: '100%' }} noValidate autoComplete="off">
+            <form method="post" data-netlify="true" className={classes.root} style={{ width: '100%' }} noValidate autoComplete="off">
 
             <input type="hidden" name="form-name" value="contact" />
 
