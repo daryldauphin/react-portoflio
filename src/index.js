@@ -90,6 +90,14 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  modalpaper: {
+    backgroundColor: theme.palette.background.paper,
+    border: '1px solid #000',
+    boxShadow: theme.shadows[5],
+    borderRadius: '5px',
+    padding: theme.spacing(2, 4, 3),
+    
+  },
   paper: {
     backgroundColor: theme.palette.background.paper,
     border: '1px solid #000',
@@ -255,32 +263,31 @@ function App() {
         }}
       >
         <Fade in={open}>
-          <div className={classes.paper}>
+          <div className={classes.modalpaper}>
             <h2 id="transition-modal-title">Contact Me.</h2>
             <hr />
 
-            <form className={classes.root} style={{ width: '100%' }} noValidate autoComplete="off">
-      <TextField id="filled-basic" label="First Name" variant="filled" />
-      <br />
-      <TextField id="filled-basic" label="Last Name" variant="filled" />
-      <br />
-      <TextField id="filled-basic" label="Email" variant="filled" />
-        <br />
-      
-      <TextField
-          id="filled-textarea"
-          label="Message"
-          placeholder=""
-          multiline
-          variant="filled"
-        />
-        <br />
-<Button display="flex" justifyContent="center" variant="contained" color="secondary">
-Send Message      </Button>
-<hr />
-<LinkedInIcon fontSize="large"/>
-<TwitterIcon fontSize="large" />
-    </form>
+            <form action="POST" data-netlify="true" className={classes.root} style={{ width: '100%' }} noValidate autoComplete="off">
+                      <TextField name="name" id="filled-basic" label="Full Name" variant="filled" />
+                      <br />
+                      
+                      <TextField name="email" id="filled-basic" label="Email" variant="filled" />
+                        <br />
+                      
+                      <TextField name="message"
+                          id="filled-textarea"
+                          label="Message"
+                          placeholder=""
+                          multiline
+                          variant="filled"
+                        />
+                        <br />
+                        <Button type="submit" display="flex" justifyContent="center" variant="contained" color="secondary">
+                        Send Message      </Button>
+                        <hr />
+                        <LinkedInIcon fontSize="large"/>
+                        <TwitterIcon fontSize="large" />
+             </form>
     
           </div>
         </Fade>
