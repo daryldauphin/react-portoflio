@@ -267,11 +267,14 @@ function App() {
             <h2 id="transition-modal-title">Contact Me.</h2>
             <hr />
 
-            <form action="POST" data-netlify="true" className={classes.root} style={{ width: '100%' }} noValidate autoComplete="off">
-                      <TextField name="name" id="filled-basic" label="Full Name" variant="filled" />
+            <form action="POST" method="post" data-netlify="true" className={classes.root} style={{ width: '100%' }} noValidate autoComplete="off">
+
+            <input type="hidden" name="form-name" value="contact" />
+
+                      <TextField name="name" type="text" id="filled-basic" label="Full Name" variant="filled" />
                       <br />
                       
-                      <TextField name="email" id="filled-basic" label="Email" variant="filled" />
+                      <TextField name="email" id="filled-basic" type="email" label="Email" variant="filled" />
                         <br />
                       
                       <TextField name="message"
