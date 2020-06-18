@@ -652,6 +652,7 @@ function App() {
 
 <div className={classes.bio}>
       
+<a href="https://thisday.design">    
 
 <div class="cContainer">
 <div class="card">
@@ -665,10 +666,11 @@ function App() {
      </Card>
     </div>
 </div>
-     
+     </a>
 
 
 
+<a href="https://www.visualsparis.com/">    
 
 <div class="cContainer">
 <div class="card">
@@ -682,7 +684,8 @@ function App() {
      </Card>
     </div>
 </div>
-     
+     </a>
+<a href="https://www.refreshitbyirene.com/">    
 
 <div class="cContainer">
 <div class="card">
@@ -696,6 +699,10 @@ function App() {
      </Card>
     </div>
 </div>
+</a>
+
+
+<a href="https://evelisionvision.com/new-tweets/">    
 <div class="cContainer">
 <div class="card">
       <Card className={classes.reactcard} >
@@ -708,7 +715,9 @@ function App() {
      </Card>
     </div>
 </div>
-     
+     </a>
+
+<a href="https://focused-hugle-ece957.netlify.app/index.html">    
 <div class="cContainer">
 <div class="card">
       <Card className={classes.reactcard} >
@@ -721,7 +730,8 @@ function App() {
      </Card>
     </div>
 </div>
-     
+</a> 
+<a href="https://kind-fermat-744b4f.netlify.app/">
 <div class="cContainer">
 <div class="card">
       <Card className={classes.reactcard} >
@@ -734,7 +744,7 @@ function App() {
      </Card>
     </div>
 </div>
-     
+     </a>
 
 
 
