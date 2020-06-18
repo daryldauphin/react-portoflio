@@ -39,7 +39,17 @@ import { ReactComponent as Logo12 } from './imgs/skills/12.svg';
 import Arrow from './components/atoms/Arrow/Arrow';
 import Up from './components/atoms/Arrow/Up';
 import CustomModal from './components/organisms/modals/Modal'
-import thisday from './imgs/SAMPLE2-new-600x600.png'; // Tell webpack this JS file uses this image
+import thisday from './imgs/SAMPLE2-new-600x600.png'; 
+import vision from './imgs/vision.jpg'; 
+import visuals from './imgs/visuals.png'; 
+import refresh from './imgs/refresh.png'; 
+import taco from './imgs/loco.png'; 
+import event from './imgs/event.png'; 
+
+
+
+
+
 
 const StyledBadge = withStyles((theme) => ({
     badge: {
@@ -288,8 +298,10 @@ function App() {
                         <Button type="submit" display="flex" justifyContent="center" variant="contained" color="secondary">
                         Send Message      </Button>
                         <hr />
-                        <LinkedInIcon fontSize="large"/>
-                        <TwitterIcon fontSize="large" />
+                        <a href="https://www.linkedin.com/in/daryldauphin/"><LinkedInIcon fontSize="large" style ={{"color":"black"}}/></a> 
+                        <a href="https://twitter.com/DarylDauphin"><TwitterIcon fontSize="large"  style ={{"color":"black"}}/></a> 
+
+                        
              </form>
     
           </div>
@@ -656,24 +668,85 @@ function App() {
 <div class="cContainer">
 <div class="card">
       <Card className={classes.reactcard} >
-       <CardContent>
+       <CardContent >
             <img width="275" height="275" src={thisday} alt="Logo" />
        </CardContent>
        <CardActions>
          <Button href="https://thisday.design" onClick={('https://thisday.design', "_blank")} style ={{"color":"black"}} size="small">View Site</Button>
-         <Button size="small">Tools Used</Button>
        </CardActions>
      </Card>
     </div>
-
-
 </div>
      
 
 
 
 
+<div class="cContainer">
+<div class="card">
+      <Card className={classes.reactcard} >
+       <CardContent>
+            <img width="280" height="270" src={visuals} alt="Logo" />
+       </CardContent>
+       <CardActions>
+         <Button href="https://www.visualsparis.com/" onClick={('https://www.visualsparis.com/', "_blank")} style ={{"color":"black"}} size="small">View Site</Button>
+       </CardActions>
+     </Card>
+    </div>
+</div>
+     
 
+<div class="cContainer">
+<div class="card">
+      <Card className={classes.reactcard} >
+       <CardContent>
+            <img width="280" height="270" src={refresh} alt="Logo" />
+       </CardContent>
+       <CardActions>
+         <Button href="https://www.refreshitbyirene.com/" onClick={('https://www.refreshitbyirene.com/', "_blank")} style ={{"color":"black"}} size="small">View Site</Button>
+       </CardActions>
+     </Card>
+    </div>
+</div>
+<div class="cContainer">
+<div class="card">
+      <Card className={classes.reactcard} >
+       <CardContent>
+            <img width="270" height="270" src={vision} alt="Logo" />
+       </CardContent>
+       <CardActions>
+         <Button href="https://evelisionvision.com/new-tweets/" onClick={('https://evelisionvision.com/new-tweets/', "_blank")} style ={{"color":"black"}} size="small">View Site</Button>
+       </CardActions>
+     </Card>
+    </div>
+</div>
+     
+<div class="cContainer">
+<div class="card">
+      <Card className={classes.reactcard} >
+       <CardContent>
+            <img width="280" height="270" src={taco} alt="Logo" />
+       </CardContent>
+       <CardActions>
+         <Button href="https://focused-hugle-ece957.netlify.app/index.html" onClick={('https://focused-hugle-ece957.netlify.app/index.html', "_blank")} style ={{"color":"black"}} size="small">View Site</Button>
+       </CardActions>
+     </Card>
+    </div>
+</div>
+     
+<div class="cContainer">
+<div class="card">
+      <Card className={classes.reactcard} >
+       <CardContent>
+            <img width="280" height="270" src={event} alt="Logo" />
+       </CardContent>
+       <CardActions>
+         <Button href="https://kind-fermat-744b4f.netlify.app/" onClick={('https://kind-fermat-744b4f.netlify.app/', "_blank")} style ={{"color":"black"}} size="small">View Site</Button>
+       </CardActions>
+     </Card>
+    </div>
+</div>
+     
 
 
 
