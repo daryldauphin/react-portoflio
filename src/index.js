@@ -388,7 +388,6 @@ function App() {
            </Logo1>
        </CardContent>
        <CardActions>
-         <Button size="small">Learn More</Button>
        </CardActions>
      </Card>
      </div>
@@ -412,7 +411,6 @@ function App() {
            </Logo2>
        </CardContent>
        <CardActions>
-         <Button size="small">Learn More</Button>
        </CardActions>
      </Card>
      </div>
@@ -435,7 +433,6 @@ function App() {
            </Logo3>
        </CardContent>
        <CardActions>
-         <Button size="small">Learn More</Button>
        </CardActions>
      </Card>
      </div>
@@ -459,7 +456,6 @@ function App() {
            </Logo4>
        </CardContent>
        <CardActions>
-         <Button size="small">Learn More</Button>
        </CardActions>
      </Card>
      </div>
@@ -482,7 +478,6 @@ function App() {
            </Logo5>
        </CardContent>
        <CardActions>
-         <Button size="small">Learn More</Button>
        </CardActions>
      </Card>
      </div>
@@ -506,7 +501,6 @@ function App() {
            </Logo6>
        </CardContent>
        <CardActions>
-         <Button size="small">Learn More</Button>
        </CardActions>
      </Card>
      </div>
@@ -529,7 +523,6 @@ function App() {
            </Logo7>
        </CardContent>
        <CardActions>
-         <Button size="small">Learn More</Button>
        </CardActions>
      </Card>
      </div>
@@ -553,7 +546,6 @@ function App() {
            </Logo8>
        </CardContent>
        <CardActions>
-         <Button size="small">Learn More</Button>
        </CardActions>
      </Card>
      </div>
@@ -576,7 +568,6 @@ function App() {
            </Logo9>
        </CardContent>
        <CardActions>
-         <Button size="small">Learn More</Button>
        </CardActions>
      </Card>
      </div>
@@ -600,7 +591,6 @@ function App() {
            </Logo10>
        </CardContent>
        <CardActions>
-         <Button size="small">Learn More</Button>
        </CardActions>
      </Card>
      </div>
@@ -624,7 +614,6 @@ function App() {
            </Logo11>
        </CardContent>
        <CardActions>
-         <Button size="small">Learn More</Button>
        </CardActions>
      </Card>
      </div>
@@ -647,7 +636,6 @@ function App() {
            </Logo12>
        </CardContent>
        <CardActions>
-         <Button size="small">Learn More</Button>
        </CardActions>
      </Card>
      </div>
