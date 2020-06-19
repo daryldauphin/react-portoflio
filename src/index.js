@@ -115,7 +115,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '5px',
     padding: theme.spacing(2, 4, 3),
     width: '100%',
-	  margin:'0.5em'
+    margin:'0.5em',
   },
     root: {
       
@@ -362,11 +362,12 @@ function App() {
 </div>  
 
 <Paper className={classes.first} boxShadow={3} elevation={3} variant="outlined">
-  
+<div class="space">
+
 <header id="header">
   <h1>SKILLS</h1>
 </header>
-
+</div>
 <div className={classes.bio}>
 
 
@@ -490,7 +491,7 @@ function App() {
 
 
 
-<Card className={classes.reactcard}>
+{/* <Card className={classes.reactcard}>
        <CardContent>
        <Logo6
          width="275" height="275" 
@@ -509,7 +510,7 @@ function App() {
 <div class="cContainer">
 <div class="card">
 
-
+ */}
 
 
 <Card className={classes.reactcard}>
@@ -574,27 +575,45 @@ function App() {
 </div>
 
 
+
+
+
+
+
+
+
+
+{/* 
 <div class="cContainer">
 <div class="card">
-
-
-
-
 <Card className={classes.reactcard}>
        <CardContent>
-       <Logo10
-         width="275" height="275" 
-         >
-           
-           
-           
-           </Logo10>
+          <Logo10 width="275" height="275">
+          </Logo10>
        </CardContent>
        <CardActions>
        </CardActions>
      </Card>
      </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <div class="cContainer">
@@ -617,7 +636,7 @@ function App() {
        </CardActions>
      </Card>
      </div>
-</div>
+</div> */}
 
 <div class="cContainer">
 <div class="card">
@@ -642,17 +661,19 @@ function App() {
 </div>
 
 </div>
+
   </Paper> 
   
 <Paper>
-  <div>
+  <div ><div class="space">
+
   <header id="projects">
   <h1>PROJECTS</h1>
 </header>
-
+</div>
 <div className={classes.bio}>
       
-<a href="https://thisday.design">    
+<a href="https://thisday.design" target="_blank">    
 
 <div class="cContainer">
 <div class="card">
@@ -670,7 +691,7 @@ function App() {
 
 
 
-<a href="https://www.visualsparis.com/">    
+<a href="https://www.visualsparis.com/" target="_blank">    
 
 <div class="cContainer">
 <div class="card">
@@ -685,7 +706,7 @@ function App() {
     </div>
 </div>
      </a>
-<a href="https://www.refreshitbyirene.com/">    
+<a href="https://www.refreshitbyirene.com/" target="_blank">    
 
 <div class="cContainer">
 <div class="card">
@@ -702,7 +723,7 @@ function App() {
 </a>
 
 
-<a href="https://evelisionvision.com/new-tweets/">    
+<a href="https://evelisionvision.com/new-tweets/" target="_blank">    
 <div class="cContainer">
 <div class="card">
       <Card className={classes.reactcard} >
@@ -717,7 +738,7 @@ function App() {
 </div>
      </a>
 
-<a href="https://focused-hugle-ece957.netlify.app/index.html">    
+<a href="https://focused-hugle-ece957.netlify.app/index.html" target="_blank">    
 <div class="cContainer">
 <div class="card">
       <Card className={classes.reactcard} >
@@ -731,7 +752,7 @@ function App() {
     </div>
 </div>
 </a> 
-<a href="https://kind-fermat-744b4f.netlify.app/">
+<a href="https://kind-fermat-744b4f.netlify.app/" target="_blank">
 <div class="cContainer">
 <div class="card">
       <Card className={classes.reactcard} >
@@ -753,7 +774,7 @@ function App() {
 
 
 
- </div>
+</div>
 </div>
 </Paper>
 
