@@ -1,5 +1,5 @@
 import React from 'react'
-import CustomTextField from '../../atoms/TextField/TextField'
+import CustomTextField from '../../atoms/Textfield/Textfield'
 import CustomButton from '../../atoms/Button/Button'
 
 
