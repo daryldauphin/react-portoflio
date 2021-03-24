@@ -49,7 +49,6 @@ import pacman from "./imgs/pacman.png";
 import picture from "./imgs/picture.png";
 import youtube from "./imgs/youtube.png";
 
-
 const StyledBadge = withStyles((theme) => ({
   badge: {
     backgroundColor: "#44b700",
@@ -402,8 +401,7 @@ function App() {
         elevation={3}
         variant="outlined"
       >
-        <div 
-        class="space">
+        <div class="space">
           <header id="header">
             <h1 id="#biog">BIO</h1>
           </header>
@@ -413,11 +411,16 @@ function App() {
           <div class="cContainer">
             <div class="card">
               <Card>
-              <iframe width="1000" height="630" 
-              
-              srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/NZPZ9PFfqAc?autoplay=1><img src=https://img.youtube.com/vi/NZPZ9PFfqAc/hqdefault.jpg alt='Video The Dark Knight Rises: What Went Wrong? – Wisecrack Edition'><span>▶</span></a>"
-
-              src="https://www.youtube.com/embed/NZPZ9PFfqAc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe
+                  width="1000"
+                  height="630"
+                  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/NZPZ9PFfqAc?autoplay=1><img src=https://img.youtube.com/vi/NZPZ9PFfqAc/hqdefault.jpg alt='Video The Dark Knight Rises: What Went Wrong? – Wisecrack Edition'><span>▶</span></a>"
+                  src="https://www.youtube.com/embed/NZPZ9PFfqAc"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
                 <p class="intro">
                   {" "}
                   Hello 👋🏽, my name is Daryl Dauphin, I am a software developer
@@ -545,12 +548,19 @@ function App() {
                 <div class="card">
                   <Card className={classes.reactcard}>
                     <CardContent>
-                      <img width="275" height="275" src={landingOne} alt="Logo" />
+                      <img
+                        width="275"
+                        height="275"
+                        src={landingOne}
+                        alt="Logo"
+                      />
                     </CardContent>
                     <CardActions>
                       <Button
                         href="https://zen-lewin-94ead4.netlify.app/"
-                        onClick={("https://zen-lewin-94ead4.netlify.app/", "_blank")}
+                        onClick={
+                          ("https://zen-lewin-94ead4.netlify.app/", "_blank")
+                        }
                         style={{ color: "black" }}
                         size="small"
                       >
@@ -572,7 +582,10 @@ function App() {
                     <CardActions>
                       <Button
                         href="https://musing-euclid-d57b98.netlify.app/"
-                        onClick={("https://musing-euclid-d57b98.netlify.app/", "_blank")}
+                        onClick={
+                          ("https://musing-euclid-d57b98.netlify.app/",
+                          "_blank")
+                        }
                         style={{ color: "black" }}
                         size="small"
                       >
@@ -583,7 +596,10 @@ function App() {
                 </div>
               </div>
             </a>
-            <a href="https://vigorous-hodgkin-127466.netlify.app/" target="_blank">
+            <a
+              href="https://vigorous-hodgkin-127466.netlify.app/"
+              target="_blank"
+            >
               <div class="cContainer">
                 <div class="card">
                   <Card className={classes.reactcard}>
@@ -594,7 +610,8 @@ function App() {
                       <Button
                         href="https://vigorous-hodgkin-127466.netlify.app/"
                         onClick={
-                          ("https://vigorous-hodgkin-127466.netlify.app/", "_blank")
+                          ("https://vigorous-hodgkin-127466.netlify.app/",
+                          "_blank")
                         }
                         style={{ color: "black" }}
                         size="small"
@@ -607,7 +624,10 @@ function App() {
               </div>
             </a>
 
-            <a href="https://daryldauphin.github.io/spotify-clone/" target="_blank">
+            <a
+              href="https://daryldauphin.github.io/spotify-clone/"
+              target="_blank"
+            >
               <div class="cContainer">
                 <div class="card">
                   <Card className={classes.reactcard}>
@@ -618,7 +638,8 @@ function App() {
                       <Button
                         href="https://daryldauphin.github.io/spotify-clone/"
                         onClick={
-                          ("https://daryldauphin.github.io/spotify-clone/", "_blank")
+                          ("https://daryldauphin.github.io/spotify-clone/",
+                          "_blank")
                         }
                         style={{ color: "black" }}
                         size="small"
@@ -658,7 +679,10 @@ function App() {
                 </div>
               </div>
             </a>
-            <a href="https://daryldauphin.github.io/eye-mouse-tracker/" target="_blank">
+            <a
+              href="https://daryldauphin.github.io/eye-mouse-tracker/"
+              target="_blank"
+            >
               <div class="cContainer">
                 <div class="card">
                   <Card className={classes.reactcard}>
@@ -669,7 +693,8 @@ function App() {
                       <Button
                         href="https://daryldauphin.github.io/eye-mouse-tracker/"
                         onClick={
-                          ("https://daryldauphin.github.io/eye-mouse-tracker/", "_blank")
+                          ("https://daryldauphin.github.io/eye-mouse-tracker/",
+                          "_blank")
                         }
                         style={{ color: "black" }}
                         size="small"
@@ -704,7 +729,10 @@ function App() {
                 </div>
               </div>
             </a>
-            <a href="https://trusting-varahamihira-ed44f7.netlify.app/" target="_blank">
+            <a
+              href="https://trusting-varahamihira-ed44f7.netlify.app/"
+              target="_blank"
+            >
               <div class="cContainer">
                 <div class="card">
                   <Card className={classes.reactcard}>
@@ -715,7 +743,8 @@ function App() {
                       <Button
                         href="https://trusting-varahamihira-ed44f7.netlify.app/"
                         onClick={
-                          ("https://trusting-varahamihira-ed44f7.netlify.app/", "_blank")
+                          ("https://trusting-varahamihira-ed44f7.netlify.app/",
+                          "_blank")
                         }
                         style={{ color: "black" }}
                         size="small"
@@ -727,7 +756,6 @@ function App() {
                 </div>
               </div>
             </a>
-           
           </div>
         </div>
       </Paper>
